@@ -1,0 +1,41 @@
+"","Model number","Model name","Term","Estimate","Std. error","Lower 95% CI","Upper 95% CI"
+"1","1","Root Biomass vs Temperature & Community & Phenophase","bIntercept",0.29,0.16,-0.03,0.61
+"2","  ","  ","bCommunityMix",-0.11,0.07,-0.24,0.02
+"3","  ","  ","bCommunityShrub",-0.09,0.07,-0.23,0.04
+"4","  ","  ","bCoreIDP2",0.15,0.06,0.04,0.26
+"5","  ","  ","bCoreIDP3",0.33,0.06,0.21,0.44
+"6","  ","  ","bquantilegroup2",0.07,0.08,-0.08,0.21
+"7","  ","  ","bquantilegroup3",0.09,0.08,-0.06,0.25
+"8","  ","  ","bquantilegroup4",0.09,0.08,-0.07,0.23
+"9","  ","  ","sdSiteIntercept",0.31,0.17,0.12,0.76
+"10","  ","  ","sigma",0.24,0.02,0.21,0.28
+"11","  ","  ","rSite[BCcoastal,Intercept]",0.2,0.15,-0.12,0.52
+"12","  ","  ","rSite[Cairngorms,Intercept]",-0.21,0.15,-0.54,0.09
+"13","  ","  ","rSite[Kluane,Intercept]",-0.16,0.16,-0.51,0.14
+"14","  ","  ","rSite[Niwot,Intercept]",0.21,0.15,-0.09,0.52
+"15","  ","  ","rSite[Toolik,Intercept]",-0.07,0.15,-0.39,0.22
+"16","2","Root Growth Rate vs Temperature & Community","bIntercept",0.01,0.01,0,0.02
+"17","  ","  ","bCommunityMix",0,0,-0.01,0
+"18","  ","  ","bCommunityShrub",0,0,-0.01,0
+"19","  ","  ","bquantilegroup2",0,0,-0.01,0
+"20","  ","  ","bquantilegroup3",0.01,0,0,0.01
+"21","  ","  ","bquantilegroup4",0,0,-0.01,0
+"22","  ","  ","sdSiteIntercept",0.02,0.03,0,0.09
+"23","  ","  ","sigma",0.01,0,0.01,0.01
+"24","  ","  ","rSite[BCcoastal,Intercept]",0.01,0.01,0,0.02
+"25","  ","  ","rSite[Cairngorms,Intercept]",-0.01,0.01,-0.03,0
+"26","  ","  ","rSite[Kluane,Intercept]",0,0.01,-0.02,0.01
+"27","  ","  ","rSite[Niwot,Intercept]",0,0.01,-0.01,0.01
+"28","  ","  ","rSite[Toolik,Intercept]",0,0.01,-0.02,0.01
+"29","3","Root Synchrony Metric vs Temperature & Community","bIntercept",2.05,3.29,-4.41,8.82
+"30","  ","  ","bCommunityMix",-5.55,3.28,-11.98,0.91
+"31","  ","  ","bCommunityShrub",1.15,3.35,-5.38,7.79
+"32","  ","  ","bquantilegroup2",-0.53,4.91,-10.44,9.11
+"33","  ","  ","bquantilegroup3",-2.4,3.88,-10.18,5.23
+"34","  ","  ","bquantilegroup4",-0.37,3.01,-6.24,5.56
+"35","  ","  ","sdSiteIntercept",1.61,1.4,0.06,5.29
+"36","  ","  ","sigma",5.81,0.97,4.28,8.14
+"37","  ","  ","rSite[BCcoastal,Intercept]",-0.03,1.53,-3.39,3.28
+"38","  ","  ","rSite[Cairngorms,Intercept]",0.31,1.64,-2.81,4.32
+"39","  ","  ","rSite[Kluane,Intercept]",-0.04,1.61,-3.62,3.31
+"40","  ","  ","rSite[Toolik,Intercept]",-0.3,1.51,-3.87,2.68

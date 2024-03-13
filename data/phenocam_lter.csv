@@ -1,0 +1,69 @@
+PLOT,Yr,Site,LTER,Observer,NOTES,plants_first_vis,90_snowfree,100_snowfree,bud_burst,100_yellow,growing_ssn_length
+UT_01,2013,Utqiagvik,Y,Elise Gallois,some missing data end of may,142,NA,NA,177,255,78
+UT_01,2014,Utqiagvik,Y,Elise Gallois,,154,172,175,176,260,84
+UT_01,2015,Utqiagvik,Y,Elise Gallois,,137,158,171,168,245,77
+UT_01,2016,Utqiagvik,Y,Elise Gallois,data cuts out in august,132,157,165,165,NA,NA
+UT_01,2017,Utqiagvik,Y,Elise Gallois,,147,172,175,180,257,77
+UT_01,2018,Utqiagvik,Y,Elise Gallois,,157,179,181,192,266,74
+UT_01,2019,Utqiagvik,Y,Elise Gallois,data missing beyond june,143,169,172,176,NA,NA
+IV_01,2004,Ivotuk,Y,Elise Gallois,,136,150,151,146,263,117
+IV_01,2005,Ivotuk,Y,Elise Gallois,,147,162,164,164,269,105
+IV_01,2006,Ivotuk,Y,Elise Gallois,Some missing data early june,134,NA,163,165,284,119
+IV_01,2007,Ivotuk,Y,Elise Gallois,,136,153,155,156,274,118
+IV_01,2010,Ivotuk,Y,Elise Gallois,,145,157,159,163,267,104
+IV_01,2011,Ivotuk,Y,Elise Gallois,,139,NA,159,160,256,96
+IV_01,2012,Ivotuk,Y,Elise Gallois,,138,155,158,164,268,104
+IV_01,2013,Ivotuk,Y,Elise Gallois,,144,161,164,161,259,98
+NEON Site - D18,2017,Toolik,Y,Elise Gallois,,135,154,155,167,253,86
+NEON Site - D19,2018,Toolik,Y,Elise Gallois,,149,170,171,177,261,84
+NEON Site - D20,2019,Toolik,Y,Elise Gallois,,129,144,146,154,244,90
+NEON Site - D21,2020,Toolik,Y,Elise Gallois,,142,153,154,161,253,92
+NEON Site - D22,2021,Toolik,Y,Elise Gallois,,134,162,163,166,256,90
+NEON Site - D23,2022,Toolik,Y,Elise Gallois,,141,165,166,170,250,80
+imcrkridge1,2013,Imnavait,Y,Elise Gallois,,151,164,166,169,241,72
+imcrkridge1,2014,Imnavait,Y,Elise Gallois,,150,165,167,171,262,91
+imcrkridge1,2015,Imnavait,Y,Elise Gallois,,137,150,157,158,239,81
+imcrkridge1,2016,Imnavait,Y,Elise Gallois,,NA,144,149,152,245,93
+imcrkridge1,2017,Imnavait,Y,Elise Gallois,,140,158,159,161,250,89
+imrcrktussok,2012,Imnavait,Y,Elise Gallois,Starts in July,NA,NA,NA,NA,270,NA
+imrcrktussok,2013,Imnavait,Y,Elise Gallois,,148,157,158,160,256,96
+imrcrktussok,2014,Imnavait,Y,Elise Gallois,,136,154,156,160,262,102
+imrcrktussok,2015,Imnavait,Y,Elise Gallois,,134,138,142,147,250,103
+imrcrktussok,2016,Imnavait,Y,Elise Gallois,,130,141,143,149,249,100
+imrcrktussok,2017,Imnavait,Y,Elise Gallois,,NA,147,148,151,262,111
+imrcrktussok,2018,Imnavait,Y,Elise Gallois,,NA,NA,NA,NA,NA,NA
+imrcrktussok,2019,Imnavait,Y,Elise Gallois,ends in july :(,132,138,141,145,NA,NA
+imrcrktussok,2020,Imnavait,Y,Elise Gallois,,143,148,150,153,252,99
+imcrkfen,2012,Imnavait,Y,Elise Gallois,Starts in July,NA,NA,NA,NA,269,NA
+imcrkfen,2013,Imnavait,Y,Elise Gallois,end of season snow returns before last leaf turns yellow :(,152,160,162,166,NA,NA
+imcrkfen,2014,Imnavait,Y,Elise Gallois,,151,159,161,168,261,93
+imcrkfen,2015,Imnavait,Y,Elise Gallois,,135,142,143,146,250,104
+imcrkfen,2016,Imnavait,Y,Elise Gallois,,132,149,150,152,256,104
+imcrkfen,2017,Imnavait,Y,Elise Gallois,,138,154,157,164,256,92
+imcrkfen,2018,Imnavait,Y,Elise Gallois,ends in june,150,168,NA,NA,NA,NA
+healy1,2016,healy_ak,Y,Elise Gallois,,NA,NA,NA,134,263,129
+healy1,2017,healy_ak,Y,Elise Gallois,,96,NA,145,142,250,108
+healy1,2018,healy_ak,Y,Elise Gallois,,128,138,139,147,271,124
+healy1,2019,healy_ak,Y,Elise Gallois,,70,113,115,137,266,129
+healy1,2020,healy_ak,Y,Elise Gallois,,109,132,134,136,264,128
+healy1,2021,healy_ak,Y,Elise Gallois,,117,138,140,144,266,122
+healy1,2022,healy_ak,Y,Elise Gallois,,140,151,154,150,263,113
+coville,2011,lakecolville,Y,Elise Gallois,,108,123,125,159,278,119
+coville,2012,lakecolville,Y,Elise Gallois,,112,137,139,157,282,125
+coville,2013,lakecolville,Y,Elise Gallois,,93,120,140,148,276,128
+coville,2014,lakecolville,Y,Elise Gallois,,NA,90,98,133,276,143
+coville,2015,lakecolville,Y,Elise Gallois,,NA,123,125,142,304,162
+coville,2016,lakecolville,Y,Elise Gallois,end of season snow returns before last leaf turns yellow :(,NA,90,93,108,NA,NA
+coville,2017,lakecolville,Y,Elise Gallois,end of season snow returns before last leaf turns yellow :(,96,110,112,118,NA,NA
+coville,2018,lakecolville,Y,Elise Gallois,,NA,127,128,120,321,201
+coville,2019,lakecolville,Y,Elise Gallois,,81,89,90,132,296,164
+contactcreek,2012,contactcreek,Y,Elise Gallois,,57,112,117,119,298,179
+contactcreek,2013,contactcreek,Y,Elise Gallois,,110,141,144,136,314,178
+contactcreek,2014,contactcreek,Y,Elise Gallois,,86,114,119,119,307,188
+contactcreek,2015,contactcreek,Y,Elise Gallois,all images black,NA,NA,NA,NA,NA,NA
+contactcreek,2016,contactcreek,Y,Elise Gallois,all images black,NA,NA,NA,NA,NA,NA
+contactcreek,2017,contactcreek,Y,Elise Gallois,no images past august,75,112,113,102,NA,NA
+contactcreek,2018,contactcreek,Y,Elise Gallois,no images before aug,NA,NA,NA,NA,328,NA
+contactcreek,2019,contactcreek,Y,Elise Gallois,,NA,113,117,93,293,200
+contactcreek,2020,contactcreek,Y,Elise Gallois,,NA,107,110,107,300,193
+contactcreek,2021,contactcreek,Y,Elise Gallois,only goes to july,61,120,122,118,NA,NA

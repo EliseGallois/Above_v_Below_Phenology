@@ -1,0 +1,42 @@
+"","Model number","Model name","Term","Estimate","Std. error","Lower 95% CI","Upper 95% CI"
+"1","1","Root Biomass vs Temperature & Community & Phenophase","b_Intercept",0.34,0.14,0.05,0.63
+"2","  ","  ","b_CommunityMix",-0.14,0.05,-0.24,-0.04
+"3","  ","  ","b_CommunityShrub",-0.12,0.06,-0.23,-0.02
+"4","  ","  ","b_Core_IDP2",0.24,0.04,0.15,0.33
+"5","  ","  ","b_Core_IDP3",0.51,0.05,0.42,0.6
+"6","  ","  ","b_quantilegroup2",0.1,0.06,-0.01,0.22
+"7","  ","  ","b_quantilegroup3",0.08,0.06,-0.04,0.21
+"8","  ","  ","b_quantilegroup4",0,0.06,-0.12,0.12
+"9","  ","  ","sd_Site__Intercept",0.26,0.14,0.1,0.66
+"10","  ","  ","sigma",0.19,0.01,0.17,0.23
+"11","  ","  ","r_Site[BC_coastal,Intercept]",0.1,0.13,-0.17,0.38
+"12","  ","  ","r_Site[Cairngorms,Intercept]",-0.12,0.14,-0.41,0.15
+"13","  ","  ","r_Site[Kluane,Intercept]",-0.2,0.14,-0.48,0.06
+"14","  ","  ","r_Site[Niwot,Intercept]",0.19,0.13,-0.07,0.48
+"15","  ","  ","r_Site[Toolik,Intercept]",0.03,0.13,-0.24,0.3
+"16","2","Root Growth Rate vs Temperature & Community","b_Intercept",0.01,0,0,0.02
+"17","  ","  ","b_CommunityMix",-0.01,0,-0.01,0
+"18","  ","  ","b_CommunityShrub",-0.01,0,-0.01,0
+"19","  ","  ","b_quantilegroup2",0,0,-0.01,0
+"20","  ","  ","b_quantilegroup3",0,0,0,0.01
+"21","  ","  ","b_quantilegroup4",0,0,-0.01,0
+"22","  ","  ","sd_Site__Intercept",0.01,0,0,0.02
+"23","  ","  ","sigma",0,0,0,0.01
+"24","  ","  ","r_Site[BC_coastal,Intercept]",0,0,0,0.01
+"25","  ","  ","r_Site[Cairngorms,Intercept]",-0.01,0,-0.02,0
+"26","  ","  ","r_Site[Kluane,Intercept]",-0.01,0,-0.01,0
+"27","  ","  ","r_Site[Niwot,Intercept]",0.01,0,0,0.02
+"28","  ","  ","r_Site[Toolik,Intercept]",0,0,-0.01,0.01
+"29","3","Root Synchrony Metric vs Temperature & Community","b_Intercept",2.1,2.13,-2.14,6.37
+"30","  ","  ","b_CommunityMix",-5.48,2.05,-9.51,-1.42
+"31","  ","  ","b_CommunityShrub",0.87,2.05,-3.25,4.88
+"32","  ","  ","b_quantilegroup2",0.8,2.59,-4.28,5.89
+"33","  ","  ","b_quantilegroup3",-1.04,2.25,-5.48,3.37
+"34","  ","  ","b_quantilegroup4",-0.4,2.14,-4.54,3.75
+"35","  ","  ","sd_Site__Intercept",1.17,1.03,0.04,3.71
+"36","  ","  ","sigma",4.65,0.6,3.65,6.02
+"37","  ","  ","r_Site[BC_coastal,Intercept]",-0.09,1.13,-2.62,2.3
+"38","  ","  ","r_Site[Cairngorms,Intercept]",0.06,1.14,-2.34,2.61
+"39","  ","  ","r_Site[Kluane,Intercept]",-0.12,1.13,-2.76,2.22
+"40","  ","  ","r_Site[Niwot,Intercept]",0.34,1.13,-1.76,3.15
+"41","  ","  ","r_Site[Toolik,Intercept]",-0.33,1.15,-3.13,1.69
