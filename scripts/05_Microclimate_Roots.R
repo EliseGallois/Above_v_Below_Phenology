@@ -146,13 +146,59 @@ all_ingrowth <- all_ingrowth %>%
                 group_by(Subplot) %>% 
                 mutate(growing_ssn = diff(range(DOY)))
 
+only_32 <- all_ingrowth %>% 
+            filter(Core_ID %in% c("P2", "P3")) %>% 
+            group_by(Subplot) %>% 
+             mutate(growing_ssn = diff(range(DOY)))
+
+only_21 <- all_ingrowth %>% 
+  filter(Core_ID %in% c("P1", "P2")) %>% 
+  group_by(Subplot) %>% 
+  mutate(growing_ssn = diff(range(DOY)))
+
+
+all_ingrowth <- all_ingrowth %>% 
+  mutate(unique_ID = paste(Site, ' ', Subplot, ' ', Core_ID)) %>% 
+  mutate(plot_ID = paste(Site, ' ', Subplot)) %>% 
+  group_by(unique_ID) %>%
+  mutate(av_roots = mean(rootmass_bulkdensity)) %>% 
+  ungroup()
+
+only_32 <- only_32 %>% 
+  mutate(unique_ID = paste(Site, ' ', Subplot, ' ', Core_ID)) %>% 
+  mutate(plot_ID = paste(Site, ' ', Subplot)) %>% 
+  group_by(unique_ID) %>%
+  mutate(av_roots = mean(rootmass_bulkdensity)) %>% 
+  ungroup()
+
+
+only_21 <- only_21 %>% 
+  mutate(unique_ID = paste(Site, ' ', Subplot, ' ', Core_ID)) %>% 
+  mutate(plot_ID = paste(Site, ' ', Subplot)) %>% 
+  group_by(unique_ID) %>%
+  mutate(av_roots = mean(rootmass_bulkdensity)) %>% 
+  ungroup()
+
+
+
 # only keep relevant columns
 root_only <- all_ingrowth %>%
   dplyr::select(Site, Subplot, Core_ID,Phenocam, Community,
-         Snowmelt, av_roots,growing_ssn, mean_temp, summer_temp, quantilegroup, async)
+         Snowmelt, av_roots,growing_ssn, mean_temp, summer_temp, quantilegroup)
+
+only_21 <- only_21 %>%
+  dplyr::select(Site, Subplot, Core_ID,Phenocam, Community,
+                Snowmelt, av_roots,growing_ssn, mean_temp, summer_temp, quantilegroup)
+
+only_32 <- only_32 %>%
+  dplyr::select(Site, Subplot, Core_ID,Phenocam, Community,
+                Snowmelt, av_roots,growing_ssn, mean_temp, summer_temp, quantilegroup)
 
 # remove duplicate averaged root values
 root_only <- root_only[!duplicated(root_only$av_roots), ]
+only_21 <- only_21[!duplicated(only_21$av_roots), ]
+only_32 <- only_32[!duplicated(only_32$av_roots), ]
+
 
 # filter with only cairngorms
 cairn_only <- root_only %>% filter(Site %in% "Cairngorms" | is.na(Site))
@@ -167,9 +213,24 @@ wide_cairn <- cairn_only %>%
 wide_three <- no_cairn %>% 
   pivot_wider(names_from = Core_ID, values_from = av_roots)
 
+wide_32 <- only_32 %>% 
+  pivot_wider(names_from = Core_ID, values_from = av_roots)
+
+wide_21 <- only_21 %>% 
+  pivot_wider(names_from = Core_ID, values_from = av_roots)
+
 # rate calculations
 wide_three <- wide_three %>% 
               mutate(root_rate = ((P3-P1)/growing_ssn))
+
+
+
+
+wide_32 <- wide_32 %>% 
+  mutate(root_rate = ((P3-P2)/growing_ssn))
+
+wide_21 <- wide_21 %>% 
+  mutate(root_rate = ((P2-P1)/growing_ssn))
 
 wide_cairn <- wide_cairn %>% 
   mutate(root_rate = ((P2-P1)/growing_ssn))
@@ -188,9 +249,39 @@ wide_cairn <- wide_cairn %>%
 
 wide_cairn$P3 <- as.numeric(wide_cairn$P3)
 wide_three$P3 <- as.numeric(wide_three$P3)
+wide_32$P3 <- as.numeric(wide_32$P3)
+wide_21$P3 <- as.numeric(wide_21$P3)
+
+wide_32$segment <- "P2-P3"
+wide_21$segment <- "P1-P2"
+
+
+colnames(wide_32)[colnames(wide_32) == "P2"] <- "PA"
+colnames(wide_32)[colnames(wide_32) == "P3"] <- "PB"
+colnames(wide_21)[colnames(wide_21) == "P1"] <- "PA"
+colnames(wide_21)[colnames(wide_21) == "P2"] <- "PB"
+
+
 
 #rbind to get merged
 all_rates <- rbind(wide_cairn, wide_three)
+sub_rates <- rbind(wide_21, wide_32)
+
+
+# plot subrates
+ggplot(sub_rates) +
+  aes(x = segment, y = root_rate, fill = Community, color = Community) +
+  geom_boxplot(alpha = 0.7) +
+  scale_fill_manual(
+    values = c(Graminoid = "#EFCE16",
+               Mix = "#7A60C0",
+               Shrub = "#53E0B1")) +
+  scale_color_manual(
+    values = c(Graminoid = "#EFCE16",
+               Mix = "#7A60C0",
+               Shrub = "#53E0B1")) +
+  labs(y = "Daily Root Biomass Growth (per g/cm3)",  x = "Community") +
+  theme_minimal()
 
 
 
@@ -697,7 +788,7 @@ all_ingrowth %>%
 
 (p2 <-ggplot(all_ingrowth, mapping = aes(y = Site, x = summer_temp, fill = Community, col = Community)) +
     geom_density_ridges(alpha = 0.4, panel_scaling = TRUE,
-                        jittered_points = TRUE, point_alpha=0.8) +
+                        jittered_points = FALSE, point_alpha=0.8) +
     scale_fill_manual(
       values = c(Graminoid = "#EFCE16",
                  Mix = "#7A60C0",
@@ -712,6 +803,22 @@ all_ingrowth %>%
     theme_ridges())
 
 
+(p2 <-ggplot(all_ingrowth, mapping = aes(y = Site, x = quantilegroup, fill = Community, col = Community)) +
+    geom_density_ridges(alpha = 0.4, panel_scaling = TRUE,
+                        jittered_points = FALSE, point_alpha=0.8) +
+    scale_fill_manual(
+      values = c(Graminoid = "#EFCE16",
+                 Mix = "#7A60C0",
+                 Shrub = "#53E0B1")
+    ) +
+    scale_color_manual(
+      values = c(Graminoid = "#EFCE16",
+                 Mix = "#7A60C0",
+                 Shrub = "#53E0B1")
+    ) +
+    labs(x = "Climate Quantiles (1 = coldest, 4 = warmest", y = "Density") +
+    theme_ridges())
+
 
 cor(all_ingrowth$Community,all_ingrowth$summer_temp,  method = c("spearman"), use = "complete.obs")
 
@@ -720,6 +827,11 @@ comm_anova <- aov(Community ~ quantilegroup, data = all_rates)
 summary(comm_anova)
 
 ggplot(all_rates) + geom_boxplot(aes(Community, quantilegroup)) 
+
+
+
+str(all_ingrowth)
+
 
 
 
