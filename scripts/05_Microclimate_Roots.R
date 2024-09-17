@@ -437,7 +437,8 @@ ggsave(alt_removal, filename = "figures/alt_community.png",
       axis.text = element_text(size = 14),      # Font size for axis text (tick labels)
       axis.title = element_text(size = 16),     # Font size for axis titles
       legend.text = element_text(size = 14),    # Font size for legend text
-      legend.title = element_text(size = 16),   # Font size for legend title
+      legend.title = element_text(size = 16),
+      strip.text = element_text(size = 14) ,# Font size for legend title
       legend.position = "none"                  # Remove the legend
     )# Font size for legend title
     )
