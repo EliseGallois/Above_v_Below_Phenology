@@ -743,7 +743,12 @@ temp_pred <- as.data.frame(temp_pred) %>%
     labs(y =bquote("Root Biomass (g"~cm^3*")"),  x = "\nClimate Quantile (1 = coldest, 4 = warmest)", 
          title = "(a)") +
     #facet_wrap(~Site) +
-    theme_classic())
+    theme_classic() +
+    theme(
+      axis.text = element_text(size = 14),      # Font size for axis text (tick labels)
+      axis.title = element_text(size = 16),     # Font size for axis titles
+      legend.text = element_text(size = 14),    # Font size for legend text
+      legend.title = element_text(size = 16)))
 (micro_mass <- micro_mass  + theme(legend.position = "none"))
 
 
@@ -770,7 +775,12 @@ rate_pred <- as.data.frame(rate_pred) %>%
     labs(y =bquote("Daily Root Biomass Accumulation (g"~cm^3*")"),  x = "\nClimate Quantile (1 = coldest, 4 = warmest)", 
          title = "(b)") +
     #facet_wrap(~Site) +
-    theme_classic())
+    theme_classic() +
+    theme(
+      axis.text = element_text(size = 14),      # Font size for axis text (tick labels)
+      axis.title = element_text(size = 16),     # Font size for axis titles
+      legend.text = element_text(size = 14),    # Font size for legend text
+      legend.title = element_text(size = 16)))
 
 (micro_rate <- micro_rate  + theme(legend.position = "none")) 
 
@@ -781,14 +791,14 @@ micro_compare <- grid.arrange(micro_mass,
 
 
 
-ggsave(micro_compare, filename = "users/egallois/soilcores/figures/quantile_brms.png",
-       height = 4, width = 7)
+ggsave(micro_compare, filename = "figures/quantile_brms.png",
+       height = 5, width = 11)
 
 #### 12 - Quick figure on potential microclimate vs community co-variation ####
 library(ggridges)
 
 all_ingrowth %>%
-  filter(!(NOTES %in% "slightly switches viewshed on 31st july\xca") | is.na(NOTES)) %>%
+  #filter(!(NOTES %in% "slightly switches viewshed on 31st july\xca") | is.na(NOTES)) %>%
   ggplot() +
   aes(x = summer_temp, fill = Community) +
   #geom_density(adjust = 1L, alpha = 0.4) +
