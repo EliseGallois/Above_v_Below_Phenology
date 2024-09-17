@@ -19,7 +19,7 @@ library(gridExtra)
 
 
 #### 2 - LOAD  ROOT PHENOLOGY  DATA ####
-roots <- read_csv("users/egallois/soilcores/data/190623_rootmass.csv")
+roots <- read_csv("data/190623_rootmass.csv")
 
 # rename columns
 roots$increment <- as.factor(roots$`Depth Increment`)
@@ -529,7 +529,7 @@ growth_rates %>%
   theme_classic()
 
 #### 5 - Bring in phenocam data ####
-phenocam <- read_csv("users/egallois/soilcores/data/phenocam_2023.csv")
+phenocam <- read_csv("data/phenocam_2023.csv")
 
 phenocam$PLOT <- as.factor(phenocam$PLOT)
 
@@ -696,7 +696,7 @@ kluane_compare <- grid.arrange(klu_greening_curves,
 
 (brew_root_rate <- growth_rates %>%
     filter(!is.na(Site)) %>%
-    filter(Site %in% "Mt_Brew") %>%
+    filter(Site %in% "BC_coastal") %>%
     ggplot() +
     aes(x = doy, y = av_roots) +
     geom_point(shape = "circle", size = 3, colour = "#5C4523") +
@@ -793,8 +793,8 @@ sites_compare <- grid.arrange(kluane_compare,
                               cairngorms_compare,
                               nrow=1)
 
-ggsave(sites_compare, filename = "users/egallois/soilcores/figures/phenocam_vs_rootgrowth.png",
-       height = 5, width = 12)
+ggsave(sites_compare, filename = "figures/phenocam_vs_rootgrowth.png",
+       height = 4, width = 12)
 
 #### 6 - Shrub vs Graminoid comparisons ####
 #define function to scale values between 0 and 1
@@ -937,10 +937,10 @@ top_only <- full_growth %>%
 
 
 # save final tommie file as a master csv
-write.csv(full_growth, file = "users/egallois/soilcores/data/rootweights_phenocams.csv", row.names = FALSE)
-write.csv(top_only, file = "users/egallois/soilcores/data/toponly_phenocams.csv", row.names = FALSE)
+write.csv(full_growth, file = "data/rootweights_phenocams.csv", row.names = FALSE)
+write.csv(top_only, file = "data/toponly_phenocams.csv", row.names = FALSE)
 
-full_growth <- read_csv("users/egallois/soilcores/data/rootweights_phenocams.csv")
+full_growth <- read_csv("data/rootweights_phenocams.csv")
 
 
 full_sen <- full_growth2 %>%
