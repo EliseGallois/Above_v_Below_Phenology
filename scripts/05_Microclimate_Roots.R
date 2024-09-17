@@ -17,14 +17,14 @@ library(sjPlot)
 #### 2 - LOAD DATA ####
 
 # load microclimate data
-tomst <- read_csv("users/egallois/soilcores/data/all_sites_mean_daily_temp.csv")
-soil <- read_csv("users/egallois/soilcores/data/all_sites_mean_daily_soil.csv")
+tomst <- read_csv("data/all_sites_mean_daily_temp.csv")
+soil <- read_csv("data/all_sites_mean_daily_soil.csv")
 
 # load root data
-roots <- read_csv("users/egallois/soilcores/data/rootweights_phenocams.csv")  
+roots <- read_csv("data/rootweights_phenocams.csv")  
 
 # load site key
-site_key <- read_csv("users/egallois/soilcores/data/tomst_key.csv") 
+site_key <- read_csv("data/tomst_key.csv") 
 
 
 # rename niwot serialID
@@ -412,12 +412,18 @@ source("https://gist.githubusercontent.com/benmarwick/2a1bb0133ff568cbe28d/raw/f
   scale_color_manual( values = c(Graminoid = "#DBBA03", Mix = "#6A3EC4", Shrub = "#48BD84") ) +
   labs(x="Core Removal ID", y=bquote("Root Biomass (g"~cm^-3*")")) +
  # facet_wrap(~Site, scales = "free") +
-  theme_classic()   )
+  theme_classic() +
+    theme(
+    axis.text = element_text(size = 14),       # Font size for axis text (tick labels)
+    axis.title = element_text(size = 16),      # Font size for axis titles
+    legend.text = element_text(size = 14),     # Font size for legend text
+    legend.title = element_text(size = 16)     # Font size for legend title
+  )  )
 
-ggsave(alt_removal, filename = "users/egallois/soilcores/figures/alt_community.png",
+ggsave(alt_removal, filename = "figures/alt_community.png",
        height = 4, width = 9)
 
-(alt_removal <- ggplot(all_rates) +
+(alt_rates <- ggplot(all_rates) +
     aes(x = Community, y = root_rate, fill = Community, colour = Community ) +
     geom_boxplot(alpha = 0.6) +
     geom_point(aes(y = root_rate, color = Community), 
@@ -426,8 +432,18 @@ ggsave(alt_removal, filename = "users/egallois/soilcores/figures/alt_community.p
     scale_color_manual( values = c(Graminoid = "#DBBA03", Mix = "#6A3EC4", Shrub = "#48BD84") ) +
     labs(x="Community", y=bquote("Daily Root Biomass Accumulation (g"~cm^-3*")")) +
     facet_wrap(~Site, scales = "free") +
-    theme_classic())
+    theme_classic()+
+    theme(
+      axis.text = element_text(size = 14),      # Font size for axis text (tick labels)
+      axis.title = element_text(size = 16),     # Font size for axis titles
+      legend.text = element_text(size = 14),    # Font size for legend text
+      legend.title = element_text(size = 16),   # Font size for legend title
+      legend.position = "none"                  # Remove the legend
+    )# Font size for legend title
+    )
   
+ggsave(alt_rates, filename = "figures/alt_community_rate.png",
+       height = 6, width = 10)
 
 #### 8 - BRMS MODELS ####
 ## RQ1 model 1: root biomass ~ temp ##
