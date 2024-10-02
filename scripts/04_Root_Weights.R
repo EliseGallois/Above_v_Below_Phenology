@@ -791,10 +791,10 @@ sites_compare <- grid.arrange(kluane_compare,
                                toolik_compare,
                               nw_compare,
                               cairngorms_compare,
-                              nrow=1)
+                              nrow=2)
 
 ggsave(sites_compare, filename = "figures/phenocam_vs_rootgrowth.png",
-       height = 4, width = 12)
+       height = 8, width = 8)
 
 #### 6 - Shrub vs Graminoid comparisons ####
 #define function to scale values between 0 and 1
