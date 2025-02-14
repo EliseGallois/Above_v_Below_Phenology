@@ -1,5 +1,4 @@
 ### 2. Extract microclima data from belowground Cairngorms plots ###
-### Elise Gallois, elise.gallois94@gmail.com ###
 ### Extract microclima data for soil core points ####
 ### Date: 10th Jan 2022 ###
 
