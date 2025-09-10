@@ -9,6 +9,16 @@ The below-ground growing season often extends beyond the above-ground growing se
 **Study Sites:** Five sites across the tundra biome  
 **Key Finding:** Asynchronous growth between above-ground and below-ground plant tissue, with the below-ground season extending up to 74% beyond the onset of above-ground leaf senescence.
 
+## Table of Contents
+
+1. [Key Research Figures](#key-research-figures) - Main manuscript figures
+2. [Site Comparison and Data Analysis](#site-comparison-and-data-analysis) - Phenocam vs root data
+3. [Community Analysis](#community-analysis) - Vegetation community comparisons
+4. [Biomass and Environmental Relationships](#biomass-and-environmental-relationships)
+5. [Statistical Modeling Results](#statistical-modeling-results) - Quantile regression analysis
+6. [Site Characterization](#site-characterization) - PCA analysis
+7. [Research Implications](#research-implications) - Key findings and significance
+
 ---
 
 ## Key Research Figures
